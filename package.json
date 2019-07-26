@@ -1,0 +1,24 @@
+{
+  "name": "mmn",
+  "version": "1.0.0",
+  "description": "manga reader",
+  "main": "lib/app.js",
+  "author": "Chen Yue <typedgames@gmail.com> (https://github.com/ldust)",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.4.1",
+    "electron": "^5.0.8",
+    "electron-builder": "^21.1.5"
+  },
+  "build": {
+    "appId": "fun.bluebit.mmn",
+    "mac": {
+      "category": "public.app-category.graphics-design"
+    }
+  },
+  "dependencies": {}
+}
