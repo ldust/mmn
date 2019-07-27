@@ -1,22 +1,13 @@
-{ app, BrowserWindow } = require 'electron'
+{ app } = require 'electron'
 
-{ hello } = require './utils'
+window = require './window'
 
 app.on 'ready', ->
-    win = new BrowserWindow(
-        width : 800,
-        height: 800,
-        webPreferences : { nodeIntegration: true }
-    )
-    win.loadFile 'index.html'
-
-    win.webContents.openDevTools()
-
-    hello()
-
-    win.on 'closed', -> win = null
+    window.create()
 
 app.on 'window-all-closed', ->
-    app.quit()
+    app.quit() unless process.platform is "darwin"
 
-
+app.on 'activate', ->
+    window.create()
+    
