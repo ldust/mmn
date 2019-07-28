@@ -1,20 +1,34 @@
+electron            = require 'electron'
+windowStateKeeper   = require 'electron-window-state'
 
-{ BrowserWindow } = require 'electron'
-
-win = null
+win = null    
 
 module.exports = 
     create: ->
         return if win?
-        win = new BrowserWindow(
-                width : 800,
-                height: 800,
-                webPreferences : { nodeIntegration: true }
-            )
+
+        mainWindowState = windowStateKeeper {
+            defaultWidth: 800,
+            defaultHeight: 600
+        }
+
+
+        win = new electron.BrowserWindow {
+            show            : false,
+            x               : mainWindowState.x,
+            y               : mainWindowState.y,
+            width           : mainWindowState.width,
+            height          : mainWindowState.height,
+            minWidth        : 320,
+            minHeight       : 200,
+            webPreferences  : { nodeIntegration: true }
+        }
+
         win.loadFile 'index.html'
 
-        win.webContents.openDevTools()
-
         win.on 'closed', -> win = null
+        win.once 'ready-to-show', win.show
+
+        mainWindowState.manage(win)
 
         win

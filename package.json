@@ -20,5 +20,7 @@
       "category": "public.app-category.graphics-design"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  }
 }
