@@ -24,7 +24,7 @@ module.exports =
             webPreferences  : { nodeIntegration: true }
         }
 
-        win.loadFile 'index.html'
+        win.loadFile 'view/index.html'
 
         win.on 'closed', -> win = null
         win.once 'ready-to-show', win.show

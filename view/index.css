@@ -1,0 +1,40 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display       : flex;
+    flex-direction: column;
+}
+
+.footer {
+    height       : 30px;
+    margin-top   : auto;
+    margin-bottom: 10px;
+    margin-left  : 10px;
+    margin-right : 10px;
+}
+
+.slidecontainer {
+    width : 100%;
+    height: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance        : none;
+    width             : 100%;
+    height            : 100%;
+    background        : #dfdfdf;
+    outline           : none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance        : none;
+    width             : 4px;
+    height            : 25px;
+    background        : #4CAF50;
+}
