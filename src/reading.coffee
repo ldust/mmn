@@ -1,14 +1,11 @@
+app = new Framework7 {
+    root: '#app'
+    name: 'mmn'
+    id: 'fun.bluebit.mmn'
+    panel: { swipe: 'left' }
+    routes: [
+        { path: '/about/', url: './view/about.html' }
+    ]
+}
 
-# onLoad = ->
-#     param = { }
-#     param.properties = ['openFile', 'openDirectory', 'multiSelections']
-#     electron.dialog.showOpenDialog param, (files) ->
-#         console.log files
-
-
-window.load = ->
-    # range_el = document.querySelector('input[type=range]')
-    # range_el.addEventListener 'input', ->
-    #     console.info "hi " + range_el.value
-    #     range_el.setAttribute('value', range_el.value)
-    # , false
+mainView = app.views.create('.view-main')

@@ -18,9 +18,14 @@
     "appId": "fun.bluebit.mmn",
     "mac": {
       "category": "public.app-category.graphics-design"
-    }
+    },
+    "files": [
+      "**/*"
+    ]
   },
   "dependencies": {
-    "electron-window-state": "^5.0.3"
+    "electron-window-state": "^5.0.3",
+    "framework7": "^4.4.10",
+    "redom": "^3.24.0"
   }
 }
