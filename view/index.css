@@ -1,9 +1,12 @@
 :root {
-    --mmn-bg-color                 : #0E1014;
-    --mmn-bar-color                : #808893;
-    --mmn-active-bar-color         : #434A54;
-    --mmn-txt-color                : #737F91;
-    --mmn-knob-color               : #E4E5E6;
+    --mmn-bg-color        : #0E1014;
+    --mmn-bar-color       : #808893;
+    --mmn-active-bar-color: #434A54;
+    --mmn-txt-color       : #737F91;
+    --mmn-knob-color      : #E4E5E6;
+
+    --f7-button-fill-bg-color      : var(--mmn-active-bar-color);
+    --f7-button-fill-text-color    : var(--mmn-knob-color);
     --f7-page-bg-color             : var(--mmn-bg-color);
     --f7-bars-bg-color             : var(--mmn-bg-color);
     --f7-toolbar-border-color      : var(--mmn-bg-color);
@@ -14,6 +17,8 @@
 }
 
 .aurora {
+    --f7-button-fill-hover-bg-color  : var(--mmn-active-bar-color);
+    --f7-button-fill-pressed-bg-color: var(--mmn-bar-color);
     --f7-range-size                  : 60px;
     --f7-range-bar-bg-color          : var(--mmn-bar-color);
     --f7-range-bar-size              : 20px;
@@ -40,19 +45,18 @@
 
 ::-webkit-scrollbar-track {
     background: var(--mmn-bg-color);
-    border: none;
-    width: 20px;
+    border    : none;
+    width     : 20px;
 }
 
 .mmnprogress {
     margin-left : 40px;
-    margin-right: 80px;
+    margin-right: 40px;
 }
 
-.mmnbtn {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+.mmninfo {
+    color     : var(--mmn-txt-color);
+    font-style: oblique;
 }
 
 .range-slider {
@@ -74,12 +78,12 @@
 
 .page-content::-webkit-scrollbar {
     background: var(--mmn-bg-color);
-    width: 10px;
-    height: 10px;
+    width     : 10px;
+    height    : 10px;
 }
 
 .page-content::-webkit-scrollbar-thumb {
-    background: var(--mmn-active-bar-color);
+    background   : var(--mmn-active-bar-color);
     border-radius: 5px;
 }
 
