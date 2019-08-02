@@ -1,54 +1,47 @@
 :root {
-    /*
-    --f7-range-bar-active-bg-color: var(--f7-theme-color);
-    */
-
-    --f7-theme-color               : #9c27b0;
-    --f7-theme-color-rgb           : 156, 39, 176;
-    --f7-theme-color-shade         : #7e208f;
-    --f7-theme-color-tint          : #b92fd1;
-    --f7-range-scale-step-height   : 25px;
-    --f7-range-scale-text-color    : #858585;
+    --f7-page-bg-color             : #293462;
+    --f7-bars-bg-color             : #293462;
+    --f7-toolbar-border-color      : #293462;
+    --f7-theme-color               : #00818a;
+    --f7-theme-color-rgb           : 142, 142, 147;
+    --f7-theme-color-shade         : #00818a;
+    --f7-theme-color-tint          : #00818a;
+    --f7-range-scale-step-height   : 20px;
+    --f7-range-scale-text-color    : #00818a;
     --f7-range-scale-substep-width : 1px;
     --f7-range-scale-substep-height: 20px;
 }
 
 .aurora {
-    --f7-range-size             : 120px;
-    --f7-range-bar-bg-color     : #858585;
+    --f7-range-size             : 50px;
+    --f7-range-bar-bg-color     : #00818a;
     --f7-range-bar-size         : 20px;
     --f7-range-bar-border-radius: 0px;
     --f7-range-knob-size        : 30px;
-    /*
-    --f7-range-knob-color: var(--f7-theme-color);
-    */
-    --f7-range-knob-box-shadow : none;
-    --f7-range-label-size      : 20px;
-    --f7-range-label-text-color: #fff;
-    /*
-    --f7-range-label-bg-color: var(--f7-theme-color);
-    */
+    --f7-range-knob-color       : #f7be16;
+
+    --f7-range-knob-box-shadow    : none;
+    --f7-range-label-size         : 20px;
+    --f7-range-label-text-color   : #00818a;
+    --f7-range-label-bg-color     : #f7be16;
     --f7-range-label-font-size    : 10px;
     --f7-range-label-font-weight  : 600;
     --f7-range-label-border-radius: 4px;
     --f7-range-label-padding      : 0px 4px;
-    /*
-    --f7-range-scale-bg-color: var(--f7-range-bar-bg-color);
-    */
-    --f7-range-scale-step-width  : 1px;
-    --f7-range-scale-font-size   : 11px;
-    --f7-range-scale-font-weight : 500;
-    --f7-range-scale-label-offset: 0px;
-    /*
-    --f7-range-scale-substep-bg-color: var(--f7-range-bar-bg-color);
-    */
 
-    --f7-toolbar-height: 100px;
+    --f7-range-scale-step-bg-color   : #293462;
+    --f7-range-scale-step-width      : 1px;
+    --f7-range-scale-font-size       : 11px;
+    --f7-range-scale-font-weight     : 500;
+    --f7-range-scale-label-offset    : 5px;
+    --f7-range-scale-substep-bg-color: #293462;
+
+    --f7-toolbar-height: 60px;
 }
 
 .mmnprogress {
-    margin-left : 20px;
-    margin-right: 20px;
+    margin-left : 40px;
+    margin-right: 40px;
 }
 
 .range-slider {
@@ -57,4 +50,9 @@
 
 .range-slider-horizontal .range-scale {
     margin-top: -10px;
+}
+
+
+.range-knob {
+    border-radius: 30%;
 }
