@@ -46,7 +46,13 @@
 
 .mmnprogress {
     margin-left : 40px;
-    margin-right: 40px;
+    margin-right: 80px;
+}
+
+.mmnbtn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
 .range-slider {
