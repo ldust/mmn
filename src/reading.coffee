@@ -1,7 +1,9 @@
+$$ = Dom7
 
 pageInit = ->
-    console.info 'page init'
-
+    $$ "#mmnopen"
+    .on 'click', ->
+        console.log "open"
 
 app = new Framework7 {
     root: '#app'
