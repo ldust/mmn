@@ -1,9 +1,13 @@
 $$ = Dom7
+electron = require('electron')
 
 pageInit = ->
     $$ "#mmnopen"
     .on 'click', ->
-        console.log "open"
+        electron.ipcRenderer.on 'asynchronous-reply', (evt, arg) ->
+            if arg.type is 'open-dialog'
+                console.log arg.paths
+        electron.ipcRenderer.send 'asynchronous-message', 'open-dialog'
 
 app = new Framework7 {
     root: '#app'

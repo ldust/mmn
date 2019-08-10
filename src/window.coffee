@@ -3,6 +3,12 @@ windowStateKeeper   = require 'electron-window-state'
 
 win = null    
 
+
+openDialog = (win, evt) ->
+    properties = [ 'openFile', 'openDirectory', 'multiSelections' ]
+    electron.dialog.showOpenDialog win, { properties }, (paths) ->
+        evt.reply 'asynchronous-reply', { type : 'open-dialog', paths }
+
 module.exports = 
     create: ->
         return if win?
@@ -30,5 +36,10 @@ module.exports =
         win.once 'ready-to-show', win.show
 
         mainWindowState.manage(win)
+
+        electron.ipcMain.on 'asynchronous-message', (evt, arg) ->
+            if arg is 'open-dialog'
+                openDialog win, evt
+
 
         win
